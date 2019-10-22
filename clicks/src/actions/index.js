@@ -1,8 +1,8 @@
 // Action creators here
 
-export const increaseClickCount = clicks => {
+export const increaseClickCount = (clickCount=0) => {
     return {
         type: "INCREASE_CLICK_COUNT",
-        payload: clicks
+        payload: clickCount
     };
 };
