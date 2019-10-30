@@ -8,7 +8,7 @@ export const increaseClickCount = () => {
 };
 
 // Action creator for changing type of animal when AnimalButton is clicked
-export const changeAnimal = (animal) => {
+export const changeAnimal = animal => {
     return {
         type: "CHANGE_ANIMAL",
         payload: animal

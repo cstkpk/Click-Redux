@@ -1,22 +1,21 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 import { connect } from "react-redux";
+
 import { increaseClickCount } from "../../actions";
 
+// PURPOSE: to use Redux to increment the click counter each time the button is clicked
 class ClickButton extends Component {
 
     render() {
         // console.log(this.props);
         return (
-            <>
             <Button 
                 variant="outline-dark"
                 onClick={() => this.props.increaseClickCount()}
             >
-                Click Me! 
+                I've been clicked {this.props.clickCount} times! 
             </Button>
-            <p>You've clicked {this.props.clickCount} times.</p>
-            </>
         );
     };
 };

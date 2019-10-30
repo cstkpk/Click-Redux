@@ -4,8 +4,9 @@ import { connect } from "react-redux";
 
 import { changeAnimal } from "../../actions";
 
+// PURPOSE: to use Redux to choose a random element from an array when button is clicked
 class AnimalButton extends Component {
-    animalArr = ["butterfly", "unicorn", "lobster", "eel"];
+    animalArr = ["butterfly", "unicorn", "lobster", "eel", "bearded dragon", "musk ox"];
     
     render() {
         return (
@@ -20,7 +21,6 @@ class AnimalButton extends Component {
 };
 
 const mapStateToProps = state => {
-    console.log(state);
     return {newAnimal: state.changeAnimalReducer };
 }
 
