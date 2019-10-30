@@ -15,6 +15,14 @@ export const changeAnimal = animal => {
     };
 };
 
+// Action creator for changing the color of the button when ColorButton is clicked
+export const changeColor = colors => {
+    return {
+        type: "CHANGE_COLOR",
+        payload: colors
+    };
+};
+
 // export const showModal = () => {
 //     return {
 //         type: "SHOW_MODAL"

@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 
 import ClickButton from "./ClickButton";
 import AnimalButton from "./AnimalButton";
+import ColorButton from "./ColorButton";
 // import Modal1 from "./Modal";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <Container>
             <ClickButton />
             <AnimalButton />
+            <ColorButton />
             {/* <Modal1 /> */}
         </Container>
     );
