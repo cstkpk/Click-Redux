@@ -4,6 +4,7 @@ import changeAnimalReducer from "./changeAnimalReducer";
 import changeColorReducer from "./changeColorReducer";
 import displayJokeReducer from "./displayJokeReducer";
 import changeAllColorsReducer from "./changeAllColorsReducer";
+import changeGifReducer from "./changeGifReducer";
 // import showModalReducer from "./showModalReducer";
 
 export default combineReducers({
@@ -11,6 +12,7 @@ export default combineReducers({
     changeAnimalReducer: changeAnimalReducer,
     changeColorReducer,
     displayJokeReducer,
-    changeAllColorsReducer
+    changeAllColorsReducer,
+    changeGifReducer
     // showModalReducer: showModalReducer
 });

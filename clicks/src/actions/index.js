@@ -39,6 +39,13 @@ export const changeAllColors = colors => {
     };
 };
 
+export const changeGif = gifs => {
+    return {
+        type: "CHANGE_GIF",
+        payload: gifs
+    };
+};
+
 // export const showModal = () => {
 //     return {
 //         type: "SHOW_MODAL"

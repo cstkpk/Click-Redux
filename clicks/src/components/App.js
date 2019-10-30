@@ -7,6 +7,7 @@ import AnimalButton from "./AnimalButton";
 import ColorButton from "./ColorButton";
 import JokeButton from "./JokeButton";
 import AllColorsButton from "./AllColorsButton";
+import GifCard from "./GifCard";
 // import Modal1 from "./Modal";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <ColorButton />
             <JokeButton />
             <AllColorsButton />
+            <GifCard />
             {/* <Modal1 /> */}
         </Container>
     );

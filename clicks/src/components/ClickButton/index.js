@@ -2,12 +2,18 @@ import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 import { connect } from "react-redux";
 
-import { increaseClickCount, changeAllColors } from "../../actions";
+import { increaseClickCount, changeAllColors, changeGif } from "../../actions";
 
 // PURPOSE: to use Redux to increment the click counter each time the button is clicked
 class ClickButton extends Component {
+    imgArr = ["https://media.giphy.com/media/3ov9k1lJ0A2o4OQew8/giphy.gif"]
 
     render() {
+        if (this.props.clickCount === 5) {
+            console.log("FIVE");
+            this.props.changeGif(this.imgArr);
+        };
+        
         // console.log(this.props);
         return (
             <Button 
@@ -27,7 +33,8 @@ class ClickButton extends Component {
 const mapStateToProps = state => {
     return { 
         clickCount: state.increaseClickCountReducer,
-        newAllColor: state.changeAllColorsReducer
+        newAllColor: state.changeAllColorsReducer,
+        newGif: state.changeGifReducer
     }
     // return state
 };
@@ -35,7 +42,8 @@ const mapStateToProps = state => {
 // Exporting ClickButton component and integrated Redux components
 export default connect(mapStateToProps, {
     increaseClickCount: increaseClickCount,
-    changeAllColors
+    changeAllColors,
+    changeGif
 })(ClickButton);
 
 
