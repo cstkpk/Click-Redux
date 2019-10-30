@@ -8,19 +8,20 @@ import { displayJoke } from "../../actions";
 class Jumbo extends Component {
     
     render() {
-        console.log(this.props);
+        // console.log(this.props);
         return (
             <Jumbotron>
                 <h1 className="text-center">Welcome to Button City</h1>
-                <p>{this.props.newJoke.Q}</p>
-                <p>{this.props.newJoke.A}</p>
+                <hr></hr>
+                <p className="text-center">{this.props.newJoke.Q}</p>
+                <p className="text-center">{this.props.newJoke.A}</p>
             </Jumbotron>
         );
     };
 };
 
 const mapStateToPRops = state => {
-    console.log(state);
+    // console.log(state);
     return { newJoke: state.displayJokeReducer };
 };
 

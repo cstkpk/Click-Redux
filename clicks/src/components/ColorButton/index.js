@@ -17,7 +17,7 @@ class ColorButton extends Component {
         {color: "info", name: "Teal"},
         {color: "light", name: "White"},
         {color: "dark", name: "Black"}
-    ]
+    ];
 
     render() {
         // console.log(this.props);
