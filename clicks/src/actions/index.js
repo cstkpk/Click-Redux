@@ -23,6 +23,14 @@ export const changeColor = colors => {
     };
 };
 
+// Action creator for displaying a joke displayed in Jumbotron when JokeButton is clicked
+export const displayJoke = jokes => {
+    return {
+        type: "DISPLAY_JOKE",
+        payload: jokes
+    };
+};
+
 // export const showModal = () => {
 //     return {
 //         type: "SHOW_MODAL"

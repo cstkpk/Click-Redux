@@ -11,7 +11,7 @@ class AnimalButton extends Component {
     render() {
         return (
             <Button
-                variant="outline-secondary"
+                variant="outline-dark"
                 onClick={() => this.props.changeAnimal(this.animalArr)}
             >
                 I am a {this.props.newAnimal}

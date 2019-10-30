@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 
 import { changeColor } from "../../actions";
 
+
+// PURPOSE: to use Redux to choose a random color and the corresponding text when the button is clicked
 class ColorButton extends Component {
 
     colorArr = [
@@ -32,7 +34,7 @@ class ColorButton extends Component {
 
 const mapStateToProps = state => {
     // console.log(state);
-    return {newColor: state.changeColorReducer };
+    return { newColor: state.changeColorReducer };
 };
 
 export default connect(mapStateToProps, {
