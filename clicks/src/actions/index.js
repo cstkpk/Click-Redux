@@ -1,13 +1,22 @@
 // Action creators here
 
+// Action creator for increasing click count when ClickButton is clicked
 export const increaseClickCount = () => {
     return {
         type: "INCREASE_CLICK_COUNT"
     };
 };
 
-export const showModal = () => {
+// Action creator for changing type of animal when AnimalButton is clicked
+export const changeAnimal = (animal) => {
     return {
-        type: "SHOW_MODAL"
-    }
-}
+        type: "CHANGE_ANIMAL",
+        payload: animal
+    };
+};
+
+// export const showModal = () => {
+//     return {
+//         type: "SHOW_MODAL"
+//     }
+// }

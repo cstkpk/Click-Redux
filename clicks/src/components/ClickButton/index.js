@@ -6,7 +6,7 @@ import { increaseClickCount } from "../../actions";
 class ClickButton extends Component {
 
     render() {
-        console.log(this.props);
+        // console.log(this.props);
         return (
             <>
             <Button 
