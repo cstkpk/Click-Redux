@@ -11,12 +11,11 @@ class ClickButton extends Component {
             <>
             <Button 
                 variant="outline-dark"
-                // TODO: Need to pass in a value of clicks, not a function
                 onClick={() => this.props.increaseClickCount()}
             >
                 Click Me! 
             </Button>
-            <p>Hello {this.props.clickCount}</p>
+            <p>You've clicked {this.props.clickCount} times.</p>
             </>
         );
     };
@@ -27,7 +26,6 @@ class ClickButton extends Component {
     // and we're going to run some calculation/computation on it that will cause that data to show up
     // as props inside of our component
 const mapStateToProps = state => {
-    console.log(state);
     return { clickCount: state.increaseClickCountReducer }
     // return state
 };
