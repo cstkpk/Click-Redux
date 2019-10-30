@@ -3,12 +3,14 @@ import increaseClickCountReducer from "./increaseClickCountReducer";
 import changeAnimalReducer from "./changeAnimalReducer";
 import changeColorReducer from "./changeColorReducer";
 import displayJokeReducer from "./displayJokeReducer";
+import changeAllColorsReducer from "./changeAllColorsReducer";
 // import showModalReducer from "./showModalReducer";
 
 export default combineReducers({
     increaseClickCountReducer: increaseClickCountReducer,
     changeAnimalReducer: changeAnimalReducer,
     changeColorReducer,
-    displayJokeReducer
+    displayJokeReducer,
+    changeAllColorsReducer
     // showModalReducer: showModalReducer
 });

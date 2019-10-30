@@ -6,6 +6,7 @@ import ClickButton from "./ClickButton";
 import AnimalButton from "./AnimalButton";
 import ColorButton from "./ColorButton";
 import JokeButton from "./JokeButton";
+import AllColorsButton from "./AllColorsButton";
 // import Modal1 from "./Modal";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <AnimalButton />
             <ColorButton />
             <JokeButton />
+            <AllColorsButton />
             {/* <Modal1 /> */}
         </Container>
     );

@@ -31,6 +31,14 @@ export const displayJoke = jokes => {
     };
 };
 
+// Action creator for changing colors of a group of buttons when AllColorsButton is clicked
+export const changeAllColors = colors => {
+    return {
+        type: "CHANGE_ALL_COLORS",
+        payload: colors
+    };
+};
+
 // export const showModal = () => {
 //     return {
 //         type: "SHOW_MODAL"
