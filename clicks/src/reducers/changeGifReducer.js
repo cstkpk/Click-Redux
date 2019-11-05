@@ -8,19 +8,37 @@ import gifs from "../assets/images";
 // POTENTIAL WORKAROUND:
     // Write action creators for each gif, so the switch statement here can specify which index in the 
         // action.payload to return for each case
-    // This obviously isn't ideal because then there would be several action creator functions 
+    // This obviously isn't ideal because then there would be several action creator functions that
         // essentially do the same thing, but it should work...
 
-export const initialState = {
-    image: gifs[0].image,
+// export const initialState = {
+//     image: gifs[0].image,
     // counter: 0
-};
+// };
 
 // export default (image = gifs[0].image, action) => {
-    export default (state = initialState, action) => {
+// export default (state = initialState, action) => {
+//     switch (action.type) {
+//         case "CHANGE_GIF":
+//             return action.payload[action.index++];
+//         default:
+//             return state;
+//     };
+// };
+
+export const initialState = {
+    counter: 0,
+    image: gifs
+}
+
+export default (state = initialState, action) => {
     switch (action.type) {
         case "CHANGE_GIF":
-            return action.payload[5];
+            return {
+                ...state,
+                counter: action.index,
+                image: action.payload
+            }
         default:
             return state;
     };

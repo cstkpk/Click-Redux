@@ -6,12 +6,13 @@ import { changeGif } from "../../actions";
 
 class GifCard extends Component {
     render() {
+        console.log(this.props);
         return (
             <Col md={{ span: 4, offset: 4 }}>
                 <Card className="mt-3">
                     <Card.Img
                         alt="five" 
-                        src={this.props.newGif.image}
+                        src={this.props.newGif.image[this.props.newGif.counter].image}
                     />
                 </Card>
             </Col>

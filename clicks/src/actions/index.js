@@ -39,10 +39,11 @@ export const changeAllColors = colors => {
     };
 };
 
-export const changeGif = gifs => {
+export const changeGif = gifObj => {
     return {
         type: "CHANGE_GIF",
-        payload: gifs
+        payload: gifObj.gifs,
+        index: gifObj.index
     };
 };
 
