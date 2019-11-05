@@ -3,12 +3,10 @@ import { Button } from "react-bootstrap";
 import { connect } from "react-redux";
 
 import { increaseClickCount, changeAllColors, changeGif } from "../../actions";
-// import gifs from "../../assets/images";
+import gifs from "../../assets/images";
 
 // PURPOSE: to use Redux to increment the click counter each time the button is clicked
 class ClickButton extends Component {
-    // Once finished, use the imported gifs array above instead of this imgArr
-    imgArr = ["https://media.giphy.com/media/3ov9k1lJ0A2o4OQew8/giphy.gif"]
 
     render() {
         
@@ -16,10 +14,12 @@ class ClickButton extends Component {
         // 1. For at least 0-5, have separate gifs
             // Change this if statement to a switch statement to account for all of the difference cases
             // Or can this be done right from the reducer? See /images/index.js
-        // 2. Save all gifs as files and figure out how to export them for use in state
+            // How to pass a second parameter of clickCount into the changeGif function? Is this possible?
+                // That's how I would increment the gifs index to show the next gif
+        // N.B. For now, this only changes to 5 (until I figure ^^ out)
         if (this.props.clickCount === 5) {
             console.log("FIVE");
-            this.props.changeGif(this.imgArr);
+            this.props.changeGif(gifs);
         };
         
         // console.log(this.props);

@@ -14,7 +14,7 @@ module.exports = [
         alt: "two"
     },
     {
-        image: require("./three.gif"),
+        image: require("./three.webp"),
         alt: "three"
     },
     {
