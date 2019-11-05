@@ -5,6 +5,11 @@ import gifs from "../assets/images";
 // 1. How to use some kind of variable or counter to specify the index of action.payload?
     // Tried using initialState and setting a counter, but so far no luck there
     // Tried creating a counter variable but it keeps getting reset back to its inital declared value
+// POTENTIAL WORKAROUND:
+    // Write action creators for each gif, so the switch statement here can specify which index in the 
+        // action.payload to return for each case
+    // This obviously isn't ideal because then there would be several action creator functions 
+        // essentially do the same thing, but it should work...
 
 export const initialState = {
     image: gifs[0].image,

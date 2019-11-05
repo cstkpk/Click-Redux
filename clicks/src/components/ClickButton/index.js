@@ -17,7 +17,7 @@ class ClickButton extends Component {
                 // That's how I would increment the gifs index to show the next gif
         // N.B. For now, this only changes to 5 (until I figure ^^ out)
         if (this.props.clickCount === 5) {
-            console.log("FIVE");
+            // console.log("FIVE");
             this.props.changeGif(gifs);
         };
         
