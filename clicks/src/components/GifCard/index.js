@@ -11,7 +11,7 @@ class GifCard extends Component {
                 <Card className="mt-3">
                     <Card.Img
                         alt="five" 
-                        src={this.props.newGif}
+                        src={this.props.newGif.image}
                     />
                 </Card>
             </Col>

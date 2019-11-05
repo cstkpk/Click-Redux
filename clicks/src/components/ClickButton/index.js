@@ -9,7 +9,6 @@ import gifs from "../../assets/images";
 class ClickButton extends Component {
 
     render() {
-        
         // TODO: 
         // 1. For at least 0-5, have separate gifs
             // Change this if statement to a switch statement to account for all of the difference cases
