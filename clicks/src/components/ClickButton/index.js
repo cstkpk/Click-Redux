@@ -2,32 +2,29 @@ import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 import { connect } from "react-redux";
 
-import { increaseClickCount, changeAllColors, changeGif } from "../../actions";
+import { increaseClickCount, changeGif } from "../../actions";
 import gifs from "../../assets/images";
 
 // PURPOSE: to use Redux to increment the click counter each time the button is clicked
+// and to change the gif based on the clickCount and conditions
 class ClickButton extends Component {
 
-    
-    render() {
+    handleOnClick = () => {
         const gifObj = {
             gifs,
-            index: this.props.clickCount
+            index: this.props.clickCount + 1 // There is a delay because of the "waterfall" this component has to go through. The +1 will give temp relief
         };
-        // TODO: 
-        // 1. How to pass a second parameter of clickCount into the changeGif function? Is this possible?
-                // That's how I would increment the gifs index to show the next gif
-        // N.B. For now, this only changes to 5 (until I figure ^^ out)
-        if (this.props.clickCount > 1) {
-            // console.log("FIVE");
+        this.props.increaseClickCount();
+        if (this.props.clickCount < 5) {
             this.props.changeGif(gifObj);
-        };
-        
-        console.log(this.props);
+        }
+    }
+    
+    render() {
         return (
             <Button 
                 variant={this.props.newAllColor}
-                onClick={() => this.props.increaseClickCount()}
+                onClick={this.handleOnClick}
             >
                 I've been clicked {this.props.clickCount} times! 
             </Button>
@@ -48,11 +45,30 @@ const mapStateToProps = state => {
     // return state
 };
 
+// mapDispatchToProps lets you specify which actions the component might need to dispatch
+// N.B. The connect function (below, in export default) receives dispatch as the second argument by default
+// dispatch is always the first argument of mapDispatchToProps
+const mapDispatchToProps = dispatch => ({
+    changeGif: gifObject => {
+        return dispatch(changeGif(gifObject));
+    },
+    increaseClickCount: () => {
+        return dispatch(increaseClickCount());
+    }
+});
+
 // Exporting ClickButton component and integrated Redux components
-export default connect(mapStateToProps, {
-    increaseClickCount: increaseClickCount,
-    changeAllColors,
-    changeGif
-})(ClickButton);
+    // Below is the old version before mapDispatchToProps was integrated (to handle the gifs)
+// ----------
+// export default connect(mapStateToProps, {
+//     increaseClickCount: increaseClickCount,
+//     changeAllColors,
+//     changeGif
+// })(ClickButton);
+// ----------
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(ClickButton);
 
 

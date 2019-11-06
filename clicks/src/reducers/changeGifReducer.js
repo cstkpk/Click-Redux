@@ -36,8 +36,8 @@ export default (state = initialState, action) => {
         case "CHANGE_GIF":
             return {
                 ...state,
-                counter: action.index,
-                image: action.payload
+                counter: action.gifObj.index,
+                image: action.gifObj.gifs
             }
         default:
             return state;

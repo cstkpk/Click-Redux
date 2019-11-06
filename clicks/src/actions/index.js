@@ -42,8 +42,7 @@ export const changeAllColors = colors => {
 export const changeGif = gifObj => {
     return {
         type: "CHANGE_GIF",
-        payload: gifObj.gifs,
-        index: gifObj.index
+        gifObj
     };
 };
 
