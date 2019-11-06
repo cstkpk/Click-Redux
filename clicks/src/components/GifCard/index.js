@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Card, Col } from "react-bootstrap";
 import { connect } from "react-redux";
 
-import { changeGif } from "../../actions";
+// import { changeGif } from "../../actions";
 
 class GifCard extends Component {
     render() {
@@ -26,6 +26,12 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps, {
-    changeGif
-})(GifCard);
+// N.B. You do not need to import or export an action creator that you are only retrieving state info from
+// if you are not calling it anywhere (not sure how best to phrase that?)
+// I.e. you still need to map it to props but don't need to do import or export it (because you aren't modifying its state?)
+// ----------
+// export default connect(mapStateToProps, {
+//     changeGif
+// })(GifCard);
+
+export default connect(mapStateToProps)(GifCard);
