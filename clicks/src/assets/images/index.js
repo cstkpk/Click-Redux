@@ -24,5 +24,10 @@ module.exports = [
     {
         image: require("./five.gif"),
         alt: "five"
+    },
+    {}, {}, {}, {},
+    {
+        image: require("./ten.gif"),
+        alt: "ten"
     }
 ];

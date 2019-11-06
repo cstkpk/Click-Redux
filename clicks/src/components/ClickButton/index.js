@@ -15,7 +15,12 @@ class ClickButton extends Component {
             index: this.props.clickCount + 1 // There is a delay because of the "waterfall" this component has to go through. The +1 will give temp relief
         };
         this.props.increaseClickCount();
+        // From clickCount 0-5, call changeGif action creator
         if (this.props.clickCount < 5) {
+            this.props.changeGif(gifObj);
+        } 
+        // When clickCount is at 10, call changeGif action creator
+        else if (this.props.clickCount === 9) {
             this.props.changeGif(gifObj);
         }
     }
