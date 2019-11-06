@@ -6,7 +6,6 @@ import { connect } from "react-redux";
 
 class GifCard extends Component {
     render() {
-        console.log(this.props);
         return (
             <Col md={{ span: 4, offset: 4 }}>
                 <Card className="mt-3">

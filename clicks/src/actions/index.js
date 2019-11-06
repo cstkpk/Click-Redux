@@ -39,10 +39,19 @@ export const changeAllColors = colors => {
     };
 };
 
+// Action creator for changing the gif based on clickCount when ClickButton is clicked
 export const changeGif = gifObj => {
     return {
         type: "CHANGE_GIF",
         gifObj
+    };
+};
+
+// Action creator for changing the size of SizeButton when it's clicked
+export const changeSize = sizes => {
+    return {
+        type: "CHANGE_SIZE",
+        payload: sizes
     };
 };
 

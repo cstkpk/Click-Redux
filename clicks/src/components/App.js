@@ -18,8 +18,8 @@ function App() {
             <ClickButton />
             <AnimalButton />
             <ColorButton />
-            <JokeButton />
             <AllColorsButton />
+            <JokeButton />
             <SizeButton />
             <GifCard />
             {/* <Modal1 /> */}
