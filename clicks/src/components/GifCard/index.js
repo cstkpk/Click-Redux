@@ -3,6 +3,7 @@ import { Card, Col } from "react-bootstrap";
 import { connect } from "react-redux";
 
 // import { changeGif } from "../../actions";
+import "./GifCard.css";
 
 class GifCard extends Component {
     render() {
