@@ -47,11 +47,17 @@ export const changeGif = gifObj => {
     };
 };
 
-// Action creator for changing the size of SizeButton when it's clicked
-export const changeSize = sizes => {
+// Action creator for changing the size of SizeButtons to small when Small is clicked
+export const changeSizeSmall = () => {
     return {
-        type: "CHANGE_SIZE",
-        payload: sizes
+        type: "CHANGE_SIZE_SMALL"
+    };
+};
+
+// Action creator for changing size of SizeButtons to medium when Medium is clicked
+export const changeSizeMed = () => {
+    return {
+        type: "CHANGE_SIZE_MED"
     };
 };
 
