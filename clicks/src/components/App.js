@@ -9,6 +9,7 @@ import JokeButton from "./JokeButton";
 import AllColorsButton from "./AllColorsButton";
 import SizeButtonSmall from "./SizeButtons/Small";
 import SizeButtonMed from "./SizeButtons/Medium";
+import SizeButtonLg from "./SizeButtons/Large";
 import GifCard from "./GifCard";
 // import Modal1 from "./Modal";
 
@@ -23,6 +24,7 @@ function App() {
             <JokeButton />
             <SizeButtonSmall />
             <SizeButtonMed />
+            <SizeButtonLg />
             <GifCard />
             {/* <Modal1 /> */}
         </Container>

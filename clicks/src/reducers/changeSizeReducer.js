@@ -5,6 +5,8 @@ export default (size = "md", action) => {
             return "sm";
         case "CHANGE_SIZE_MED":
             return "md";
+        case "CHANGE_SIZE_LG":
+            return "lg";
         default:
             return size;
     };

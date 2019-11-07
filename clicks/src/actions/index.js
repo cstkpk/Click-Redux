@@ -61,6 +61,13 @@ export const changeSizeMed = () => {
     };
 };
 
+// Action creator for changing size of SizeButtons to large when Large is clicked
+export const changeSizeLg = () => {
+    return {
+        type: "CHANGE_SIZE_LG"
+    };
+};
+
 // export const showModal = () => {
 //     return {
 //         type: "SHOW_MODAL"
